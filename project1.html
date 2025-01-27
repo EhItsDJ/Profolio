@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project 1 - My Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <!-- Header -->
@@ -20,13 +22,32 @@
   <!-- Project Details Section -->
   <section class="project-details">
     <h2>About Project 1</h2>
-    <p>This project involves creating a game engine using JavaScript...</p>
-    <!-- Add more content here about the project, images, etc. -->
+    <p>This project involves creating a game engine using JavaScript and other technologies. It's a challenging and fun
+      project that pushes the limits of what can be done in the browser.</p>
+
+    <!-- Photos Section (Gallery) -->
+    <h3>Project Photos</h3>
+    <div class="photo-gallery">
+      <!-- Main photo display -->
+      <div class="main-photo">
+        <img id="main-photo" src="img/photo1_large.jpg" alt="Main Project Photo">
+      </div>
+
+      <!-- Small thumbnail images -->
+      <div class="thumbnails">
+        <img class="thumbnail" src="img/photo1_thumb.jpg" alt="Thumbnail 1" onclick="changeMainImage('img/photo1_large.jpg')">
+        <img class="thumbnail" src="img/photo2_thumb.jpg" alt="Thumbnail 2" onclick="changeMainImage('img/photo2_large.jpg')">
+        <img class="thumbnail" src="img/photo3_thumb.jpg" alt="Thumbnail 3" onclick="changeMainImage('img/photo3_large.jpg')">
+        <img class="thumbnail" src="img/photo4_thumb.jpg" alt="Thumbnail 4" onclick="changeMainImage('img/photo4_large.jpg')">
+      </div>
+    </div>
   </section>
 
   <footer>
     <p>© 2025 My Portfolio | Built with ♥ by <a href="https://github.com/yourusername" target="_blank">Your Name</a></p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
+
 </html>
