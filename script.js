@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const projectsContainer = document.querySelector('.projects-container');
 
+
+// Function to change the main image when a thumbnail is clicked
+function changeMainImage(imageSrc) {
+  const mainPhoto = document.getElementById("main-photo");
+  mainPhoto.src = imageSrc;
+}
+
   // Fetch and display projects
   fetch('/get-projects')
     .then(response => response.json())
