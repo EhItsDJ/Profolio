@@ -1,0 +1,188 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #2c2c2c, #1a1a1a); /* Slightly lighter gradient */
+  color: #fff;
+  line-height: 1.6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+  background-image: url('https://www.transparenttextures.com/patterns/abstract-light.png'), 
+                    linear-gradient(45deg, #2c2c2c, #1a1a1a); /* Adding a subtle abstract pattern */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay; /* Blending abstract pattern with dark gradient */
+}
+
+/* Main Content Area */
+main {
+  flex-grow: 1; /* This ensures the content area takes all available space */
+}
+
+/* Header */
+header {
+  background: linear-gradient(45deg, #333, #444); /* Slightly lighter gradient for header */
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Adding shadow to header for depth */
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+header .login-btn {
+  background-color: #444;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+header .login-btn:hover {
+  background-color: #666; /* Lighter gray on hover */
+}
+
+/* Projects Section */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #222, #333); /* Darker gradient for cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border: 1px solid #555;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(135deg, #444, #555); /* Lighter gradient on hover */
+}
+
+.project-card h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.project-card .circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: #555;
+  transition: background-color 0.3s ease;
+}
+
+.project-card:nth-child(1) .circle {
+  background-color: #777;
+}
+
+.project-card:nth-child(2) .circle {
+  background-color: #999;
+}
+
+.project-card:nth-child(3) .circle {
+  background-color: #bbb;
+}
+
+.project-card:hover .circle {
+  background-color: #fff; /* Lighten circle on hover */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  background: linear-gradient(45deg, #333, #444); /* Dark gradient footer */
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Adding shadow to footer for depth */
+  position: relative; /* Optional */
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #FF5722;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Links for Project View Button */
+.project-link {
+  color: #FF5722;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #FF8A00;
+}
+
+/* Add subtle animations to elements */
+.project-card {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.project-card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
